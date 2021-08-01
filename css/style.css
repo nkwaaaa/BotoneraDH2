@@ -1,0 +1,188 @@
+@font-face {
+  font-family: "child-font";
+  src: url("../src/font/LapsusPro-Bold.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, right top, from(#1e9600), color-stop(#fff200), to(#ff0000));
+  background: linear-gradient(to right, #1e9600, #fff200, #ff0000);
+}
+
+#header {
+  text-align: center;
+  color: linear-gradient(to right, #1e9600, #fff200, #ff0000);
+  font-family: "child-font";
+}
+
+#image {
+  margin-top: 2rem;
+  width: 65%;
+  cursor: pointer;
+  border-radius: 2rem;
+  -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.6);
+          box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.6);
+}
+
+#image:hover {
+  -webkit-box-shadow: 0px 0px 40px 5px #fdfdfd;
+          box-shadow: 0px 0px 40px 5px #fdfdfd;
+}
+
+#title {
+  font-size: 3rem;
+  margin: 1rem;
+}
+
+#subtitle {
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+#container {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.button:hover {
+  -o-border-image: 3px solid green;
+     border-image: 3px solid green;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.card {
+  border-radius: 50%;
+  height: 10rem;
+  width: 10rem;
+  margin: 0.7rem;
+  -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.6);
+          box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.6);
+  /* --------------------------------- juego? --------------------------------- */
+}
+
+.card:hover {
+  -webkit-box-shadow: 0px 0px 40px 15px #fdfdfd;
+          box-shadow: 0px 0px 40px 15px #fdfdfd;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  z-index: 100;
+}
+
+button::after {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 500;
+  content: attr(data-description);
+  background: yellow;
+  color: #333;
+  width: 180px;
+  border-radius: 6px;
+  padding: .5rem 0;
+  border: 2px solid black;
+  position: relative;
+  top: -10px;
+}
+
+/* ----------------------------- cuando carga ---------------------------- */
+#loading {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #fce6ff;
+  top: 0;
+  left: 0;
+  z-index: 15;
+}
+
+#loading-text {
+  font-size: 30px;
+  text-align: center;
+  font-family: "child-font";
+  color: #a171fd;
+}
+
+/* --------------------------- responsive poenele --------------------------- */
+@media (max-width: 480px) {
+  #image {
+    display: none;
+  }
+  #container {
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+  }
+}
+
+#stop {
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  z-index: 500;
+  content: none;
+}
+
+#stop2 {
+  position: fixed;
+  right: 200px;
+  bottom: 25px;
+  z-index: 500;
+  content: none;
+}
+
+.stop {
+  width: 5rem;
+  height: 5rem;
+}
+
+.stop::after {
+  content: "c calla";
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+  left: 0.7rem;
+  padding: 0 1rem;
+}
+
+#ya_estoy_haciendo_cualquiera:hover {
+  border: none;
+  -webkit-box-shadow: 0px 0px 40px 5px #070707;
+          box-shadow: 0px 0px 40px 5px #070707;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  z-index: 100;
+}
+/*# sourceMappingURL=style.css.map */

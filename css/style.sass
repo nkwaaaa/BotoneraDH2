@@ -1,0 +1,167 @@
+@import "config"
+@font-face
+    font-family: "child-font"
+    src: url("../src/font/LapsusPro-Bold.otf")
+
+*
+    margin: 0
+    padding: 0
+    border: 0
+    font-size: 100%
+    box-sizing: border-box
+
+
+body
+
+    background: $gradient-color
+
+#header
+    text-align: center
+    color: $font-color
+    font-family: "child-font"
+
+#image
+    margin-top: 2rem
+    width: 65%
+    cursor: pointer
+    border-radius: 2rem
+    box-shadow: $box-shadow
+    &:hover
+        
+        box-shadow: 0px 0px 40px 5px #fdfdfd
+
+#title
+    font-size: 3rem
+    margin: 1rem
+
+#subtitle
+    font-size: 1.5rem
+    margin: 1rem
+
+#container
+    width: 80%
+    margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: space-evenly
+    flex-wrap: wrap
+
+
+.button
+    border: none
+    background: none
+    cursor: pointer
+    margin: 1rem
+    &:hover
+        border-image: 3px solid green
+        // transform: translateY(-8px)
+        transform: scale(1.2)
+        transition: all 0.5s
+
+
+.card
+    border-radius: 50%
+    height: 10rem
+    width: 10rem
+    margin: 0.7rem
+    box-shadow: $box-shadow
+    /* --------------------------------- juego? --------------------------------- */
+    // filter: brightness(0)
+    &:hover
+
+        // filter: brightness(100%)
+        // border: 3px solid $tertiary-color       
+        box-shadow: 0px 0px 40px 15px #fdfdfd
+        transition: 0.7s
+        z-index: 100
+
+        
+
+
+button::after
+    display: flex
+    justify-content: center
+    z-index: 500
+    content: attr(data-description)
+    background: $secondary-color
+    color: #333
+    width: 180px
+    border-radius: 6px
+    padding: .5rem 0
+    border: 2px solid black
+    // transform: translateY(4)
+    position: relative
+    top: -10px
+
+
+/* ----------------------------- cuando carga ---------------------------- */
+
+#loading
+    height: 100%
+    width: 100%
+    position: absolute
+    background-color: #fce6ff
+    top: 0
+    left: 0
+    z-index: 15
+
+
+#loading-text
+    font-size: 30px
+    text-align: center
+    font-family: "child-font"
+    color: #a171fd
+
+/* --------------------------- responsive poenele --------------------------- */
+
+@media ( max-width: 480px )
+    #image
+        display: none
+    #container
+        justify-content: right
+
+
+
+#stop 
+    
+    position: fixed
+    right: 30px
+    bottom: 50px
+    z-index: 500
+    content: none
+
+    
+#stop2 
+    
+    position: fixed
+    right: 200px
+    bottom: 25px
+    z-index: 500
+    content: none
+    
+    
+.stop
+    width: 5rem
+    height: 5rem
+
+    
+    &::after
+        content: "c calla"
+        width:  max-content
+        position: relative
+        left: 0.7rem
+        padding: 0 1rem
+    
+        
+#ya_estoy_haciendo_cualquiera
+    &:hover
+
+        border: none
+        box-shadow: 0px 0px 40px 5px #070707
+        transition: 0.7s
+        z-index: 100
+
+    
+ 
+    
+    
